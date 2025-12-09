@@ -2,6 +2,8 @@
   <dictionary name="project">
     <words>
       <w>fname</w>
+      <w>lname</w>
+      <w>mname</w>
     </words>
   </dictionary>
 </component>

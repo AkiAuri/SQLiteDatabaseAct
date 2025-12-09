@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#F5F5F5">
@@ -9,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update Record"
+        android:text="@string/Update_Record_Title"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#333333"
@@ -20,76 +21,86 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:hint="First Name">
+        android:hint="@string/First_Name">
 
         <EditText
             android:id="@+id/Fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="Your First Name"
             android:inputType="textPersonName"
             android:padding="12dp"
-            android:background="@android:drawable/edit_text"/>
+            android:background="@android:drawable/edit_text"
+            tools:ignore="LabelFor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:hint="Middle Name">
+        android:hint="@string/Middle_Name">
 
         <EditText
             android:id="@+id/Mname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="Your Middle Name"
             android:inputType="textPersonName"
             android:padding="12dp"
-            android:background="@android:drawable/edit_text"/>
+            android:background="@android:drawable/edit_text"
+            tools:ignore="LabelFor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:hint="Last Name">
+        android:hint="@string/Last_Name">
 
         <EditText
             android:id="@+id/Lname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="Your Last Name"
             android:inputType="textPersonName"
             android:padding="12dp"
-            android:background="@android:drawable/edit_text"/>
+            android:background="@android:drawable/edit_text"
+            tools:ignore="LabelFor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:hint="Address">
+        android:hint="@string/Address">
 
         <EditText
             android:id="@+id/Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="Your Address"
             android:inputType="textPostalAddress"
             android:padding="12dp"
             android:background="@android:drawable/edit_text"
-            android:minLines="2"/>
+            android:minLines="2"
+            tools:ignore="LabelFor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:hint="Email">
+        android:hint="@string/Email">
 
         <EditText
             android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="Your Email"
             android:inputType="textEmailAddress"
             android:padding="12dp"
-            android:background="@android:drawable/edit_text"/>
+            android:background="@android:drawable/edit_text"
+            tools:ignore="LabelFor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout

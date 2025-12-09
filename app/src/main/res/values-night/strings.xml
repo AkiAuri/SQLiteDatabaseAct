@@ -1,12 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SQL Activity</string>
     <string name="add_New_Record">Add New Record</string>
     <string name="First_Name">First Name</string>
     <string name="Middle_Name">Middle Name</string>
     <string name="Last_Name">Last Name</string>
     <string name="Address">Address</string>
     <string name="Email">Email</string>
-    <string name="Add_Record_BTN">Add Record</string>
     <string name="View_Records_BTN">View Records</string>
     <string name="Clear_All_Records_BTN">Clear All Records</string>
     <string name="Update_Record_Title">Update Record</string>
