@@ -10,4 +10,7 @@
     <string name="View_Records_BTN">View Records</string>
     <string name="Clear_All_Records_BTN">Clear All Records</string>
     <string name="Update_Record_Title">Update Record</string>
+    <string name="Update_BTN">Update</string>
+    <string name="Delete_BTN">Delete</string>
+    <string name="Back_to_Records_BTN">Back to Records</string>
 </resources>
