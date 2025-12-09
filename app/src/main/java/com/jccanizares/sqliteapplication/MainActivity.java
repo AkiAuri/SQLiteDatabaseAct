@@ -114,10 +114,10 @@ public class MainActivity extends Activity {
     }
 
     public void ViewRecords(View view){
-        Log.d(TAG, "ViewRecords: Method called");
+        Log.d(TAG, "ViewRecords:  Method called");
 
         try {
-            DisplayForm=new Intent("com.sqllite.app.RECORDSACTIVITY");
+            DisplayForm = new Intent(MainActivity.this, RecordsActivity. class);
             Log.d(TAG, "ViewRecords: Intent created");
 
             startActivity(DisplayForm);
@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
         } catch (Exception e) {
             Log.e(TAG, "ViewRecords: Failed to start activity", e);
             e.printStackTrace();
-            Toast. makeText(getApplicationContext(), "Error opening records:  " + e.getMessage(),
+            Toast.makeText(getApplicationContext(), "Error opening records:  " + e.getMessage(),
                     Toast.LENGTH_SHORT).show();
         }
     }

@@ -59,7 +59,7 @@ public class RecordsActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         // TODO Auto-generated method stub
-        super.onListItemClick(l, v, position, id);
+        super. onListItemClick(l, v, position, id);
         Log.d(TAG, "onListItemClick: Item clicked at position:  " + position + ", id: " + id);
 
         try {
@@ -70,19 +70,19 @@ public class RecordsActivity extends ListActivity {
                 return;
             }
 
-            if (Conn.RecordsId == null || Conn.RecordsId.size() <= position) {
+            if (Conn.RecordsId == null || Conn.RecordsId. size() <= position) {
                 Log.e(TAG, "onListItemClick:  RecordsId is null or position out of bounds.  " +
                         "Position: " + position + ", Size: " +
                         (Conn.RecordsId != null ? Conn.RecordsId.size() : "null"));
                 Toast.makeText(getApplicationContext(), "Invalid record selection",
-                        Toast. LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show();
                 return;
             }
 
             UpdateActivity.ID = Conn.RecordsId.get(position);
-            Log.i(TAG, "onListItemClick: Selected record ID: " + UpdateActivity.ID);
+            Log.i(TAG, "onListItemClick: Selected record ID: " + UpdateActivity. ID);
 
-            DispForm = new Intent("com.sqllite.app. UPDATEACTIVITY");
+            DispForm = new Intent(RecordsActivity. this, UpdateActivity.class);
             Log.d(TAG, "onListItemClick: Intent created for UpdateActivity");
 
             startActivity(DispForm);

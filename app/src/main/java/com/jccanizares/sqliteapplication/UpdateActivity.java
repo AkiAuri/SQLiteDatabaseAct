@@ -107,7 +107,7 @@ public class UpdateActivity extends Activity {
         Log.d(TAG, "Back: Method called");
 
         try {
-            DispForm=new Intent("com.sqllite. app.RECORDSACTIVITY");
+            DispForm = new Intent(UpdateActivity.this, RecordsActivity.class);
             Log.d(TAG, "Back: Intent created");
 
             startActivity(DispForm);
@@ -126,12 +126,12 @@ public class UpdateActivity extends Activity {
         try {
             FNAME=Fname.getText().toString();
             MNAME=Mname.getText().toString();
-            LNAME=Lname. getText().toString();
+            LNAME=Lname.getText().toString();
             ADDRESS=Address.getText().toString();
             EMAIL=Email.getText().toString();
 
-            Log.d(TAG, "UpdateRecord: Retrieved values - FNAME: " + FNAME +
-                    ", MNAME: " + MNAME + ", LNAME: " + LNAME +
+            Log. d(TAG, "UpdateRecord: Retrieved values - FNAME: " + FNAME +
+                    ", MNAME: " + MNAME + ", LNAME:  " + LNAME +
                     ", ADDRESS: " + ADDRESS + ", EMAIL: " + EMAIL);
 
             if (FNAME.equals("")){
@@ -140,7 +140,7 @@ public class UpdateActivity extends Activity {
                 Fname.requestFocus();
             }
             else if (MNAME.equals("")){
-                Log.w(TAG, "UpdateRecord: Validation failed - Middle name is empty");
+                Log.w(TAG, "UpdateRecord:  Validation failed - Middle name is empty");
                 Mname.setError("Please Enter Your Middle Name");
                 Mname.requestFocus();
             }
@@ -155,32 +155,32 @@ public class UpdateActivity extends Activity {
                 Address.requestFocus();
             }
             else if (EMAIL.equals("")){
-                Log.w(TAG, "UpdateRecord: Validation failed - Email is empty");
-                Email. setError("Please Enter Your Email");
+                Log.w(TAG, "UpdateRecord:  Validation failed - Email is empty");
+                Email.setError("Please Enter Your Email");
                 Email.requestFocus();
             }
             else{
                 Log.d(TAG, "UpdateRecord: Validation passed, updating record ID: " + ID);
 
-                if (Conn.UpdateRecords(FNAME, MNAME, LNAME, ADDRESS, EMAIL, ID)) {
-                    Log. i(TAG, "UpdateRecord: Record updated successfully");
+                if (Conn. UpdateRecords(FNAME, MNAME, LNAME, ADDRESS, EMAIL, ID)) {
+                    Log.i(TAG, "UpdateRecord: Record updated successfully");
 
                     Fname.setText("");
                     Mname.setText("");
                     Lname.setText("");
-                    Address.setText("");
+                    Address. setText("");
                     Email.setText("");
                     Log.d(TAG, "UpdateRecord: Form fields cleared");
 
                     Toast. makeText(getApplicationContext(), "RECORD UPDATED!",
                             Toast.LENGTH_SHORT).show();
 
-                    DispForm=new Intent("com.sqllite.app.RECORDSACTIVITY");
+                    DispForm = new Intent(UpdateActivity.this, RecordsActivity. class);
                     startActivity(DispForm);
-                    Log.d(TAG, "UpdateRecord:  Navigating back to RecordsActivity");
+                    Log.d(TAG, "UpdateRecord: Navigating back to RecordsActivity");
                 } else {
                     Log.e(TAG, "UpdateRecord: Failed to update record");
-                    Toast.makeText(getApplicationContext(), "Error: Failed to update record",
+                    Toast. makeText(getApplicationContext(), "Error:  Failed to update record",
                             Toast.LENGTH_SHORT).show();
                 }
             }
@@ -193,12 +193,12 @@ public class UpdateActivity extends Activity {
     }
 
     public void DeleteRecord(View view){
-        Log.d(TAG, "DeleteRecord: Method called for ID:  " + ID);
+        Log.d(TAG, "DeleteRecord: Method called for ID: " + ID);
 
         try{
             if (ID == null) {
                 Log.e(TAG, "DeleteRecord: Record ID is null");
-                Toast.makeText(getApplicationContext(), "Error: No record to delete",
+                Toast. makeText(getApplicationContext(), "Error: No record to delete",
                         Toast. LENGTH_SHORT).show();
                 return;
             }
@@ -210,9 +210,9 @@ public class UpdateActivity extends Activity {
                 Toast.makeText(getApplicationContext(), "RECORD DELETED!",
                         Toast.LENGTH_SHORT).show();
 
-                DispForm=new Intent("com.sqllite.app.RECORDSACTIVITY");
+                DispForm = new Intent(UpdateActivity. this, RecordsActivity.class);
                 startActivity(DispForm);
-                Log. d(TAG, "DeleteRecord:  Navigating back to RecordsActivity");
+                Log.d(TAG, "DeleteRecord: Navigating back to RecordsActivity");
             } else {
                 Log.e(TAG, "DeleteRecord: Failed to delete record");
                 Toast.makeText(getApplicationContext(), "Error: Failed to delete record",

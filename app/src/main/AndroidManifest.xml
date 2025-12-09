@@ -12,35 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLActivity">
 
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android. intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- Records Activity -->
         <activity
             android:name=".RecordsActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="com.sqllite.app.RECORDSACTIVITY" />
-                <category android:name="android. intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait" />
 
+        <!-- Update Activity -->
         <activity
             android:name=".UpdateActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="com.sqllite.app.UPDATEACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait" />
 
     </application>
 
