@@ -15,7 +15,7 @@ public class RecordsActivity extends ListActivity {
     public Intent DispForm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-// TODO Auto-generated method stub
+    // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         Conn=new SQLiteDatabase(this);
         try{

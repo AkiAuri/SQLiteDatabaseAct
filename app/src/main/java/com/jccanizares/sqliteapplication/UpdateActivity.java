@@ -9,8 +9,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class UpdateActivity extends Activity {
-    public EditText Fname, Mname, Lname;
-    public String FNAME=null, MNAME=null, LNAME=null;
+    public EditText Fname, Mname, Lname, Address, Email;
+    public String FNAME=null, MNAME=null, LNAME=null, ADDRESS=null, EMAIL=null;
     public Intent DispForm;
     public SQLiteDatabase Conn;
     public Cursor rs;
@@ -22,6 +22,8 @@ public class UpdateActivity extends Activity {
         Fname=(EditText)findViewById(R.id.Fname);
         Mname=(EditText)findViewById(R.id.Mname);
         Lname=(EditText)findViewById(R.id.Lname);
+        Address=(EditText)findViewById(R.id.Address);
+        Email=(EditText)findViewById(R.id.Email);
         Conn=new SQLiteDatabase(this);
         try{
             rs=Conn.getData(ID);
@@ -29,6 +31,8 @@ public class UpdateActivity extends Activity {
             Fname.setText(rs.getString(rs.getColumnIndex(Conn.PROFILE_FNAME)));
             Mname.setText(rs.getString(rs.getColumnIndex(Conn.PROFILE_MNAME)));
             Lname.setText(rs.getString(rs.getColumnIndex(Conn.PROFILE_LNAME)));
+            Address.setText(rs.getString(rs.getColumnIndex(Conn.PROFILE_ADDRESS)));
+            Email.setText(rs.getString(rs.getColumnIndex(Conn.PROFILE_EMAIL)));
         }
         catch(Exception e){e.printStackTrace();
             Toast.makeText(getApplicationContext(), e.getMessage().toString(),
@@ -75,7 +79,7 @@ public class UpdateActivity extends Activity {
     }
     @Override
     protected void onPause() {
-// TODO Auto-generated method stub
+    // TODO Auto-generated method stub
         super.onPause(); finish();
     }
 }
